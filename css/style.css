@@ -1,0 +1,242 @@
+body {
+background: #8FBB63;
+color: white;
+}
+
+#output {
+  font-size: 8.0em;
+  width: 43%;
+  height: auto;
+  background-color: #8FBB63;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 40px;
+  color: white;
+}
+
+.btn {
+  margin: 30px;
+  padding: 30px;
+  font-size: 1.8em;
+  background: #E5B1C9;
+  border-radius: 100px;
+  border: none;
+  width: 150px;
+  height: 240px;
+  text-align: center;
+  transform: translateY(30px);
+  color: white;
+}
+
+#controls{
+  background: #FBDEEB;
+  border-radius: 200px;
+  height: 380px;
+  width: 700px;
+  margin: 0 auto;
+}
+
+.btn:hover {
+  background: #E5B1C9;
+  color: white;
+  border-radius: white 3px;
+}
+
+
+
+/* pig */
+
+#pig-animation {
+  width: 800px;
+  height: 600px;
+  border-radius: 30px;
+  margin: 0 auto;  /* center animation horizontally within browser window */
+  position: relative; /* because all the items inside this will be positioned absolutely */
+  overflow: hidden;
+}
+
+
+
+/*
+*******************************
+* Pig Leg Left Back
+*******************************
+*/
+#pig-leg-left-back {
+  position: absolute;
+  left: 240px;
+  top: 370px;
+}
+
+/*
+*******************************
+* Pig Leg Left Front
+*******************************
+*/
+#pig-leg-left-front {
+  position: absolute;
+  left: 480px;
+  top: 370px;
+}
+
+/*
+*******************************
+* Pig Body
+*******************************
+*/
+#pig-body {
+  position: absolute;
+  left: 160px;
+  top: 275px;
+}
+
+/*
+*******************************
+* Pig Tail
+*******************************
+*/
+#pig-tail {
+  position: absolute;
+  left: 150px;
+  top: 260px;
+}
+
+/*
+*******************************
+* Pig Ear
+*******************************
+*/
+#pig-ear {
+  position: absolute;
+  left: 460px;
+  top: 240px;
+}
+
+/*
+*******************************
+* Pig Leg Right Back
+*******************************
+*/
+#pig-leg-right-back {
+  position: absolute;
+  left: 200px;
+  top: 380px;
+}
+
+/*
+*******************************
+* Pig Leg Right Front
+*******************************
+*/
+#pig-leg-right-front {
+  position: absolute;
+  left: 440px;
+  top: 380px;
+}
+
+/*
+*******************************
+* Leg Animations
+*******************************
+*/
+@keyframes legs1 {
+	from { transform: rotate(-10deg); }
+	to { transform: rotate(10deg); }
+}
+
+@-webkit-keyframes legs1 {
+	from { -webkit-transform: rotate(-10deg); }
+	to { -webkit-transform: rotate(10deg); }
+}
+
+@-moz-keyframes legs1 {
+	from { -moz-transform: rotate(-10deg); }
+	to { -moz-transform: rotate(10deg); }
+}
+
+@keyframes legs2 {
+	from { transform: rotate(10deg); }
+	to { transform: rotate(-10deg); }
+}
+
+@-webkit-keyframes legs2 {
+	from { -webkit-transform: rotate(10deg); }
+	to { -webkit-transform: rotate(-10deg); }
+}
+
+@-moz-keyframes legs2 {
+	from { -moz-transform: rotate(10deg); }
+	to { -moz-transform: rotate(-10deg); }
+}
+
+#pig-leg-right-front, #pig-leg-left-back {
+	animation: legs1 0.5s linear 0s infinite alternate;
+	-webkit-animation: legs1 0.5s linear 0s infinite alternate;
+	-moz-animation: legs1 0.5s linear 0s infinite alternate;
+}
+
+#pig-leg-left-front, #pig-leg-right-back {
+	animation: legs2 0.5s linear 0s infinite alternate;
+	-webkit-animation: legs2 0.5s linear 0s infinite alternate;
+	-moz-animation: legs2 0.5s linear 0s infinite alternate;
+}
+
+/*
+*******************************
+* Body Animations
+*******************************
+*/
+
+/* Move up and down along Y axis */
+@keyframes pig-body {
+  from { transform: translateY(0px); }
+  to { transform: translateY(10px); }
+}
+@-webkit-keyframes pig-body {
+  from { -webkit-transform: translateY(0px); }
+  to { -webkit-transform: translateY(10px); }
+}
+@-moz-keyframes pig-body {
+  from { -moz-transform: translateY(0px); }
+  to { -moz-transform: translateY(10px); }
+}
+
+#pig-body {
+  animation: pig-body 0.25s linear 0s infinite alternate;
+  -webkit-animation: pig-body 0.25s linear 0s infinite alternate;
+  -moz-animation: pig-body 0.25s linear 0s infinite alternate;
+}
+
+.paused {
+    -webkit-animation-play-state: paused !important;
+    animation-play-state: paused !important;
+}
+
+
+/*
+*******************************
+* Ear and Tail Animations
+*******************************
+*/
+
+/* Same up and down as body, but ALSO a slight rotation */
+@keyframes ear-tail {
+  from { transform: translateY(0px) rotate(-5deg); }
+  to { transform: translateY(10px) rotate(5deg); }
+}
+@-webkit-keyframes ear-tail {
+  from { -webkit-transform: translateY(0px) rotate(-5deg); }
+  to { -webkit-transform: translateY(10px) rotate(5deg); }
+}
+@-moz-keyframes ear-tail {
+  from { -moz-transform: translateY(0px) rotate(-5deg); }
+  to { -moz-transform: translateY(10px) rotate(5deg); }
+}
+
+#pig-tail, #pig-ear {
+  animation: ear-tail 0.25s linear 0s infinite alternate;
+  -webkit-animation: ear-tail 0.25s linear 0s infinite alternate;
+  -moz-animation: ear-tail 0.25s linear 0s infinite alternate;
+}
+
+
